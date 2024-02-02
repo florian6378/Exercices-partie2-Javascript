@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8</title>
+</head>
+<body>
+
+        <script>
+
+
+
+        // Fonction pour afficher une demi-pyramide de 5 lignes de haut
+        function demiPyramide() {
+            for (let i = 1; i <= 5; i++) {
+                let ligne = '';
+                for (let j = 1; j <= i; j++) {
+                    ligne += '* ';
+                }
+                console.log(ligne);
+            }
+        }
+
+        // Fonction pour afficher une pyramide complète
+        function pyramideComplete(hauteur) {
+            for (let i = 1; i <= hauteur; i++) {
+                let ligne = '';
+                for (let j = 1; j <= hauteur - i; j++) {
+                    ligne += ' ';
+                }
+                for (let k = 1; k <= 2 * i - 1; k++) {
+                    ligne += '*';
+                }
+                console.log(ligne);
+            }
+        }
+
+        // Appel des fonctions pour afficher les pyramides
+        window.onload = function() {
+            console.log('Demi-pyramide de 5 lignes de haut :');
+            demiPyramide();
+            
+            let hauteur = prompt('Entrez la hauteur de la pyramide complète :');
+            hauteur = parseInt(hauteur);
+            if (!isNaN(hauteur) && hauteur > 0) {
+                console.log('Pyramide complète de hauteur ' + hauteur + ' :');
+                pyramideComplete(hauteur);
+            } else {
+                console.log('Veuillez entrer un nombre entier positif.');
+            }
+        };
+
+ 
+ 
+
+ 
+        </script>
+    
+</body>
+</html>

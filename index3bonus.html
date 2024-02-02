@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8 bonus</title>
+</head>
+<body>
+
+    <script>
+
+// Fonction pour afficher une pyramide complète
+function pyramideComplete(hauteur) {
+    for (let i = 1; i <= hauteur; i++) {
+        let ligne = '';
+        // Ajouter les espaces à gauche de la ligne
+        for (let j = 1; j <= hauteur - i; j++) {
+            ligne += ' ';
+        }
+        // Ajouter les étoiles
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            ligne += '*';
+        }
+        // Afficher la ligne
+        console.log(ligne);
+    }
+}
+
+// Demander à l'utilisateur la hauteur de la pyramide complète
+const hauteur = parseInt(prompt('Entrez la hauteur de la pyramide complète :'));
+if (!isNaN(hauteur) && hauteur > 0) {
+    console.log('Pyramide complète de hauteur ' + hauteur + ' :');
+    pyramideComplete(hauteur);
+} else {
+    console.log('Veuillez entrer un nombre entier positif.');
+}
+
+  
+    </script>
+    
+</body>
+</html>
